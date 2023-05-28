@@ -1,0 +1,4 @@
+rootProject.name = 'SI_lab2_216048'
+include 'src:test'
+findProject(':src:test')?.name = 'test'
+
