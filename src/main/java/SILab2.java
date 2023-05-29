@@ -33,45 +33,45 @@ class User {
 public class SILab2 {
 
     public static boolean function (User user, List<User> allUsers) {
-        if (user==null || user.getPassword()==null || user.getEmail()==null){
-            throw new RuntimeException("Mandatory information missing!");
+        if (user==null || user.getPassword()==null || user.getEmail()==null){ //A
+            throw new RuntimeException("Mandatory information missing!"); //B
         }
 
-        if (user.getUsername()==null){
-            user.setUsername(user.getEmail());
+        if (user.getUsername()==null){ //C
+            user.setUsername(user.getEmail()); //D
         }
 
-        int same = 1;
-        if (user.getEmail().contains("@") && user.getEmail().contains(".")) {
-            same = 0;
-            for (int i=0;i<allUsers.size();i++) {
-                User existingUser = allUsers.get(i);
-                if (existingUser.getEmail() == user.getEmail()) {
-                    same += 1;
+        int same = 1; //E
+        if (user.getEmail().contains("@") && user.getEmail().contains(".")) { //F
+            same = 0; //G
+            for (int i=0;i<allUsers.size();i++) { //H
+                User existingUser = allUsers.get(i); //I
+                if (existingUser.getEmail() == user.getEmail()) { //J
+                    same += 1; //K
                 }
-                if (existingUser.getUsername() == user.getUsername()) {
-                    same += 1;
+                if (existingUser.getUsername() == user.getUsername()) { //L
+                    same += 1; //M
                 }
             }
         }
 
-        String specialCharacters="!#$%&'()*+,-./:;<=>?@[]^_`{|}";
-        String password = user.getPassword();
-        String passwordLower = password.toLowerCase();
+        String specialCharacters="!#$%&'()*+,-./:;<=>?@[]^_`{|}"; //N
+        String password = user.getPassword(); //N
+        String passwordLower = password.toLowerCase(); //N
 
-        if (passwordLower.contains(user.getUsername().toLowerCase()) || password.length()<8) {
-            return false;
+        if (passwordLower.contains(user.getUsername().toLowerCase()) || password.length()<8) { //O
+            return false; //P
         }
         else {
-            if (!passwordLower.contains(" ")) {
-                for (int i = 0; i < specialCharacters.length(); i++) {
-                    if (password.contains(String.valueOf(specialCharacters.charAt(i)))) {
-                        return same == 0;
+            if (!passwordLower.contains(" ")) { //Q
+                for (int i = 0; i < specialCharacters.length(); i++) { //R
+                    if (password.contains(String.valueOf(specialCharacters.charAt(i)))) { //S
+                        return same == 0; //T
                     }
                 }
             }
         }
-        return false;
-    }
+        return false; //U
+    } //V
 
 }
