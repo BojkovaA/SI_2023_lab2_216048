@@ -16,7 +16,7 @@ class SILab2Test {
         RuntimeException ex;
 
         ex = assertThrows(RuntimeException.class, () -> SILab2.function(new User("Ana", "ANABANANA", null), null));
-        assertTrue(ex.getMessage().contains("Mandator/86y information missing!"));
+        assertTrue(ex.getMessage().contains("Mandatory information missing!"));
 
 
         User user1 = new User( null, "LUBENICKA*", "ana1@gmail.com");
