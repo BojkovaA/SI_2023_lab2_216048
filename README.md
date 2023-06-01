@@ -1,11 +1,11 @@
 # Ангела Бојкова 216048 
 ## Control Flow Graph 
-![CFG](https://github.com/BojkovaA/SI_2023_lab2_216048/assets/108904427/6be5e2c6-05b9-4ef5-84a7-07022375a1a8)<br />
+![CFG](images/CFG.png)<br />
 ## Цикломатска комплексност
 Цикломатскта комплексност ја добив така што ги изброив бројот на региони кои ги имам кои исто така се означени на графот, вкупно се 11, значи цикломатската комплексност е 11.
 
 ## Every Branch
-![EVERY_BRANCH](https://github.com/BojkovaA/SI_2023_lab2_216048/assets/108904427/9a2585eb-06c6-49fb-b20a-b466d137527b)<br />
+![EVERY_BRANCH](images/EVEY_BRANCH.png)<br />
 Тест случаи според EveryBranch <br />
 Имам вкупно 5 тест случаи: <br />
 1)Првиот тест случај ми е за RuntimeException.<br />
